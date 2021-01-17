@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PharmacyDBModelStoreContainer" CdmEntityContainer="PharmacyDB">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="PharmacyDBModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="A_ID" ColumnName="A_ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Firms">
+      <EntityTypeMapping TypeName="PharmacyDBModel.Firm">
+        <MappingFragment StoreEntitySet="Firms">
+          <ScalarProperty Name="F_ID" ColumnName="F_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medicines">
+      <EntityTypeMapping TypeName="PharmacyDBModel.Medicine">
+        <MappingFragment StoreEntitySet="Medicine">
+          <ScalarProperty Name="M_ID" ColumnName="M_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsReceipt" ColumnName="IsReceipt" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="FirmID" ColumnName="FirmID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medicine_To_Tags">
+      <EntityTypeMapping TypeName="PharmacyDBModel.Medicine_To_Tags">
+        <MappingFragment StoreEntitySet="Medicine_To_Tags">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MedicineID" ColumnName="MedicineID" />
+          <ScalarProperty Name="TagID" ColumnName="TagID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="PharmacyDBModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="O_ID" ColumnName="O_ID" />
+          <ScalarProperty Name="WorkerID" ColumnName="WorkerID" />
+          <ScalarProperty Name="MedicineID" ColumnName="MedicineID" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="PharmacyDBModel.Tag">
+        <MappingFragment StoreEntitySet="Tags">
+          <ScalarProperty Name="T_ID" ColumnName="T_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="PharmacyDBModel.Worker">
+        <MappingFragment StoreEntitySet="Workers">
+          <ScalarProperty Name="W_ID" ColumnName="W_ID" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
