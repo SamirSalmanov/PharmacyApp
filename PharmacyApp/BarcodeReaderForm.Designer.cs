@@ -40,9 +40,10 @@ namespace PharmacyApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(82, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Camera";
             // 
@@ -51,26 +52,29 @@ namespace PharmacyApp
             this.cmbCamera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCamera.FormattingEnabled = true;
-            this.cmbCamera.Location = new System.Drawing.Point(104, 13);
+            this.cmbCamera.Location = new System.Drawing.Point(143, 20);
+            this.cmbCamera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCamera.Name = "cmbCamera";
-            this.cmbCamera.Size = new System.Drawing.Size(332, 28);
+            this.cmbCamera.Size = new System.Drawing.Size(455, 37);
             this.cmbCamera.TabIndex = 1;
             this.cmbCamera.SelectedIndexChanged += new System.EventHandler(this.cmbCamera_SelectedIndexChanged);
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(16, 71);
+            this.pictureBox.Location = new System.Drawing.Point(22, 65);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(420, 273);
+            this.pictureBox.Size = new System.Drawing.Size(1215, 801);
             this.pictureBox.TabIndex = 2;
             this.pictureBox.TabStop = false;
             // 
             // txtBarcode
             // 
             this.txtBarcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarcode.Location = new System.Drawing.Point(2, 418);
+            this.txtBarcode.Location = new System.Drawing.Point(23, 934);
+            this.txtBarcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(213, 30);
+            this.txtBarcode.Size = new System.Drawing.Size(291, 39);
             this.txtBarcode.TabIndex = 3;
             // 
             // btnStart
@@ -78,9 +82,10 @@ namespace PharmacyApp
             this.btnStart.BackColor = System.Drawing.Color.DarkOrange;
             this.btnStart.Font = new System.Drawing.Font("Microsoft Uighur", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.Location = new System.Drawing.Point(320, 394);
+            this.btnStart.Location = new System.Drawing.Point(1061, 925);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(116, 54);
+            this.btnStart.Size = new System.Drawing.Size(160, 81);
             this.btnStart.TabIndex = 15;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
@@ -88,14 +93,15 @@ namespace PharmacyApp
             // 
             // BarcodeReaderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1171, 682);
+            this.ClientSize = new System.Drawing.Size(2213, 1411);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.txtBarcode);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.cmbCamera);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BarcodeReaderForm";
             this.Text = "BarcodeReaderForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BarcodeReaderForm_FormClosing);

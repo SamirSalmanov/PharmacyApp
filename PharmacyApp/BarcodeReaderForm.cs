@@ -24,7 +24,7 @@ namespace PharmacyApp
 
         private void BarcodeReaderForm_Load(object sender, EventArgs e)
         {
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.AudioInputDevice);
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach(FilterInfo device in filterInfoCollection)
             {
                 cmbCamera.Items.Add(device.Name);

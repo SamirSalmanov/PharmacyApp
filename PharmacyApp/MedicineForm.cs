@@ -15,7 +15,6 @@ namespace PharmacyApp
     public partial class MedicineForm : Form
     {
         PharmacyDB _context = new PharmacyDB();
-        private object tagName;
 
         #region Load
 
@@ -56,7 +55,6 @@ namespace PharmacyApp
 
         private void btnAddMedicine_Click(object sender, EventArgs e)
         {
-            AddTagToMedicine();
             string medicineName = txtMedicine.Text;
             decimal price = nmPrice.Value;
             short quantity = (short)nmQuantity.Value;
@@ -83,6 +81,8 @@ namespace PharmacyApp
                     medicine.IsReceipt = cbReceipt.Checked ? true : false;
                     _context.Medicines.Add(medicine);
                     _context.SaveChanges();
+                    AddTagToMedicine(medicine.M_ID);
+
                     MessageBox.Show("Medicine added successfully");
                     FillMedicineDataGrid();
                     ClearAllData();
@@ -182,13 +182,19 @@ namespace PharmacyApp
             return selectedTag.T_ID;
         }
 
-        private void AddTagToMedicine()
+        private void AddTagToMedicine(int medId)
         {
+
             for (int i = 0; i < ckTagList.Items.Count; i++)
             {
                 string tagName = ckTagList.Items[i].ToString();
                 int tagId = FindTagID(tagName);
-
+                _context.Medicine_To_Tags.Add(new Medicine_To_Tags()
+                {
+                    MedicineID = medId,
+                    TagID = tagId
+                });
+                _context.SaveChanges();
             }
         }
 
